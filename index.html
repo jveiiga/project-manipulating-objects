@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Abra o console!</h1>
+
+    <h2>Manipulando Objetos.</h2>
+
+    <h3>Alterando com Map.</h3>
+    <code>
+        const alterandoValorPropriedade = (itemArray) => { </br>
+
+            const result = itemArray.map((produto) => {
+        
+                let { id, price } = produto </br>
+                if  ( id > 2 ) { </br>
+                    price = 2.00 </br>
+                } </br>
+                return {...produto, price} </br>
+            }) </br>
+            return result </br>
+        } </br>
+    </code>
+
+    <h3>Filtrando com Filter.</h3>
+    <code>
+        const filtrandoPorValor = (itemArray) => { </br>
+
+            const result = itemArray.filter((produto) => { </br>
+        
+                let { id } = produto </br>
+                if  ( id <= 2 ) { </br>
+                    return {...produto, id} </br>
+                } </br>
+            }) </br>
+            return result </br>
+        } </br>
+    </code>
+
+    <h3>Filtrando com Find.</h3>
+    <code>
+        const buscandoValor = (itemArray) => { </br>
+
+            const result = itemArray.find(({product}) => { </br>
+                if(product === "Leite") { </br>
+                    return product </br>
+                } </br>
+            }) </br>
+            return result </br>
+        } </br>
+    </code>
+
+    <h3>Somando com reduce.</h3>
+    <code>
+        const somaTotalProdutos = (itemArray) => { </br>
+            const result = itemArray.reduce((acc, {quantity, price}) => { </br>
+              
+                let totalList = acc+(price*quantity) </br>
+                
+                return totalList </br>
+        
+            }, 0) </br>
+        
+            return result </br>
+        } </br>
+    </code>
+    <script src="script.js"></script>
+</body>
+</html>
