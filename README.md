@@ -111,4 +111,3 @@ const testReduce = (array) => {
 1. Crie um filtro onde o resultado traz apenas os itens que tem o price maior que 3.
 2. Altere o valor do item leite para 4.
 3. Faça o total de todos os itens da section 'Padaria'
-# project-manipulating-objects
